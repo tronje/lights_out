@@ -59,7 +59,7 @@ function main() {
     if (jaws.pressed("d")) {player.move(speed, 0)};
     if (jaws.pressed("s")) {player.move(0, speed)};
     if (jaws.pressed("w")) {player.move(0, -speed)};
-    if (jaws.pressed("q")) {++density};
+    if ((density < 9) && jaws.pressed("q")) {++density};
     if ((density > 1) && jaws.pressed("e")) {--density};
     jaws.on_keydown("space", shoot);
 
